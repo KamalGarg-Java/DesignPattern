@@ -4,10 +4,16 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.gargmal</groupId>
-    <artifactId>designpattern</artifactId>
+    <parent>
+        <artifactId>designpattern</artifactId>
+        <groupId>org.gargmal</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+
+    <groupId>org.gargmal.designpattern</groupId>
+    <artifactId>behaviroural</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <packaging>pom</packaging>
+    <packaging>jar</packaging>
 
     <properties>
         <maven.compiler.source>18</maven.compiler.source>
@@ -15,10 +21,4 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
-
-    <modules>
-      <module>creational</module>
-      <module>structural</module>
-      <module>behavioral</module>
-    </modules>
 </project>
