@@ -1,6 +1,8 @@
 package org.gargmal.designpattern.creational.singleton.impl.lazy;
 
-public class DoubleCheckLockingNotCloneablePreventDeserializationSingleton {
+import java.io.Serializable;
+
+public class DoubleCheckLockingNotCloneablePreventDeserializationSingleton implements Serializable {
     private static DoubleCheckLockingNotCloneablePreventDeserializationSingleton INSTANCE;
 
     private DoubleCheckLockingNotCloneablePreventDeserializationSingleton() {}
@@ -19,5 +21,8 @@ public class DoubleCheckLockingNotCloneablePreventDeserializationSingleton {
     @Override
     public DoubleCheckLockingNotCloneablePreventDeserializationSingleton clone() throws CloneNotSupportedException {
       throw new CloneNotSupportedException();
+    }
+    public Object readResolve() {
+       return INSTANCE;
     }
 }
