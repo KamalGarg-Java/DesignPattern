@@ -9,7 +9,7 @@ public class DoubleCheckLockingNotCloneablePreventDeserializationSingleton imple
 
     public static DoubleCheckLockingNotCloneablePreventDeserializationSingleton getInstance() {
         if(INSTANCE == null) {
-            synchronized (SynchronizedBlockDoubleCheckLockingSingleton.class) {
+            synchronized (DoubleCheckLockingNotCloneablePreventDeserializationSingleton.class) {
                 if(INSTANCE == null) {
                     INSTANCE = new DoubleCheckLockingNotCloneablePreventDeserializationSingleton();
                 }
