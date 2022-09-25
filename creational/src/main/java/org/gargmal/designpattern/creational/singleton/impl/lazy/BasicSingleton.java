@@ -1,7 +1,7 @@
-package org.gargmal.designpattern.creational.singleton;
+package org.gargmal.designpattern.creational.singleton.impl.lazy;
 
 
-final class BasicSingleton {
+public class BasicSingleton {
     private static BasicSingleton INSTANCE;
 
     private BasicSingleton() {}

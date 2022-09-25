@@ -1,4 +1,6 @@
-package org.gargmal.designpattern.creational.singleton;
+package org.gargmal.designpattern.creational.singleton.clients;
+
+import org.gargmal.designpattern.creational.singleton.impl.lazy.BasicSingleton;
 
 public class BasicSingletonClient {
     public static void main(String[] args) {
@@ -18,7 +20,7 @@ public class BasicSingletonClient {
         if(isAllSame) {
           System.out.println("Great :) :: All instance are same.");
         } else{
-          System.out.println("Ohh no :(, Multiple Objects Created.");
+          System.out.println("Ohh no :( :: Multiple Objects Created.");
         }
     }
 }
